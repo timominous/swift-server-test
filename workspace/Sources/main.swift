@@ -9,5 +9,14 @@
 import Foundation
 import Vapor
 
-print("Integration Successful!")
+//print("Integration Successful!")
+
+print("SwiftServer -- starting")
+
+Route.get("hello") { _ -> ResponseConvertible in
+  return ["Hello": "World"]
+}
+
+let server = Server()
+server.run(port: 8080)
 

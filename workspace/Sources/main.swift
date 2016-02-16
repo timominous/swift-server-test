@@ -9,8 +9,6 @@
 import Foundation
 import Vapor
 
-//print("Integration Successful!")
-
 print("SwiftServer -- starting")
 
 Route.get("hello") { _ -> ResponseConvertible in

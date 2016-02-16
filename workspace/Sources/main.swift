@@ -15,6 +15,11 @@ Route.get("hello") { _ -> ResponseConvertible in
   return ["Hello": "World"]
 }
 
+Route.get("hello/:name") { (request) -> ResponseConvertible in
+  let name = request.parameters["name"] ?? "World"
+  return ["Hello": name]
+}
+
 let server = Server()
 server.run(port: 8080)
 
